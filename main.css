@@ -1,0 +1,1146 @@
+/* ===== BASE STYLES ===== */
+:root {
+    --primary-color: #FF8CA1;
+    --secondary-color: #70E7FF;
+    --accent-color: #53C3B8;
+    --text-color: #555555;
+    --light-bg: rgba(255, 236, 239, 0.756);
+    --card-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    
+}
+
+@font-face {
+    font-family: 'Shooting\Star.ttf';
+    src: local('Shooting Star'),
+         url('Shooting\ Star.ttf') format('truetype'),
+         url('Shooting\ Star.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+    padding: 50px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.team-title {
+    font-size: 2.5rem;
+    color: #2c388f;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    overflow: hidden;
+}
+
+/* Default state - show flower pin */
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    transition: all .4s;
+}
+
+/* Assign different flower pins */
+.profile-card:nth-child(1)::before { background-image: url('https://i.pinimg.com/736x/05/c8/31/05c831f84b6959b5b0cc177d8ae95a9c.jpg'); }
+.profile-card:nth-child(2)::before { background-image: url('https://i.pinimg.com/736x/a1/af/87/a1af873f78021b2054c6da9f631384b2.jpg'); }
+.profile-card:nth-child(3)::before { background-image: url('https://i.pinimg.com/736x/d2/b7/37/d2b73790d9b9af74d53944d124a2d4b4.jpg'); }
+.profile-card:nth-child(4)::before { background-image: url('https://i.pinimg.com/736x/ea/79/17/ea79172edfa4c82d1dc8adab43d3e173.jpg'); }
+.profile-card:nth-child(5)::before { background-image: url('https://i.pinimg.com/736x/e8/c4/2c/e8c42c52e2f6f4d8b503461efd9b21be.jpg'); }
+.profile-card:nth-child(6)::before { background-image: url('https://i.pinimg.com/736x/a2/4c/60/a24c606e10f8fbe386cba60d19dc2192.jpg'); }
+
+/* Different text colors for each member */
+.profile-card:nth-child(1) .caption h3,
+.profile-card:nth-child(1) .caption h4 {
+    color: #ffe600; /* Pink for Cherryl */
+}
+
+.profile-card:nth-child(2) .caption h3,
+.profile-card:nth-child(2) .caption h4 {
+    color: #70E7FF; /* Blue for Olivia */
+}
+
+.profile-card:nth-child(3) .caption h3,
+.profile-card:nth-child(3) .caption h4{
+    color: #ff4949;} 
+
+    .profile-card:nth-child(4) .caption h3,
+.profile-card:nth-child(4) .caption h4 {
+    color: #8f00bb; /* Purple for Keira */
+}
+
+.profile-card:nth-child(5) .caption h3,
+.profile-card:nth-child(5) .caption h4 {
+    color: #4e6501; 
+}
+
+/* Face photo as background */
+.profile-card .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    transition: all .4s;
+    opacity: 0;
+}
+
+/* Different face for each member */
+.profile-card:nth-child(1) .img { background-image: url('cherryl.jpeg'); }
+.profile-card:nth-child(2) .img { background-image: url('olivia.jpeg'); }
+.profile-card:nth-child(3) .img { background-image: url('bianca.jpeg'); }
+.profile-card:nth-child(4) .img { background-image: url('kei.jpeg'); }
+.profile-card:nth-child(5) .img { background-image: url('annabel.jpeg'); }
+.profile-card:nth-child(6) .img { background-image: url('sherlyn.jpeg'); }
+
+/* Hover effects */
+.profile-card:hover {
+    border-radius: 10px;
+    height: 200px;
+}
+
+.profile-card:hover::before {
+    opacity: 0;
+    transform: scale(1.3);
+}
+
+.profile-card:hover .img {
+    opacity: 1;
+    border-radius: 10px;
+    transform: translateY(-20px);
+}
+
+.caption {
+    position: relative;
+    text-align: center;
+   color: #FFF;
+    opacity: 0;
+    z-index: 3;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+  
+}
+
+/* Add this to your existing CSS */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the main content container */
+.sec {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Center the team section */
+.team-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center the team grid */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+/* Center profile cards */
+.profile-card {
+    margin: 0 auto;
+}
+
+/* Center the footer */
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+/* Center the header */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center the navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Remove duplicate media queries */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 21px;
+    color: #e8ebff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.caption h4 {
+    font-size: 16px;
+   
+
+    margin-bottom: 10px;
+}
+
+.caption .social-links {
+    font-size: 14px;
+    color: #333;
+}
+
+.caption .social-links i {
+    margin-right: 5px;
+    color: #721a82;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    margin: 0 20px;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+    transform: translateY(-70px);
+}
+
+.profile-card img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .4s;
+    z-index: 99;
+}
+
+/* ===== TEAM FLOWER PINS ===== */
+.team-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.flower-pins-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+
+}
+
+.flower-pin {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('flower-pin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 10;
+}
+
+.flower-pin:hover {
+    transform: scale(1.2);
+}
+
+.member-face {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 5;
+}
+
+.flower-pin:hover + .member-face,
+.member-face:hover {
+    opacity: 1;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-90px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 21px;
+    color: #f0f2ff;
+    font-weight: 600;
+}
+
+.caption p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 2px 0 12px 0;
+    text-align: center;
+}
+
+.caption .social-links i {
+    font-size: 21px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #333;
+    transition: all .4s;
+}
+
+.caption .social-links i:hover {
+    color: #721a82;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .team-container {
+        gap: 1.5rem;
+    }
+    .profile-card {
+        width: 200px;
+        height: 200px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .team-container {
+        gap: 1rem;
+    }
+    .profile-card {
+        width: 180px;
+        height: 180px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-card {
+        width: 220px;
+        height: 220px;
+        margin: 15px 0;
+    }
+}
+
+/* Add this CSS */
+.meet-team {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add this to your CSS */
+.meet-team {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+}
+
+/* Keep all your existing animations */
+.profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+    transform: translateY(-70px);
+}
+
+.profile-card img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .4s;
+    z-index: 99;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-90px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add to your main.css */
+/* Animated sections */
+[data-aos] {
+    transition-property: transform, opacity;
+}
+
+/* Team section styling */
+.anggota .nav-tabs {
+    border: 0;
+    background-color: #749765;
+}
+
+.anggota .nav-link {
+    background-color: #648954;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.anggota .nav-link.active {
+    background-color: #769c66;
+    color: #243b1b;
+}
+
+/* Abstract box styling */
+.box1 {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-image: url(https://i.pinimg.com/736x/e6/dc/82/e6dc8278d1e38800f3923dba02ebf1b7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out, moveBackground 20s linear infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes moveBackground {
+    from { background-position: 0 100%; }
+    to { background-position: 0 0; }
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+   
+
+    
+    font-family: ShootingStar, sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 3px solid #73e6e4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1.5s ease-in-out;
+    letter-spacing: 2px;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.header-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    font-family: 'ShootingStar.ttf',  sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+nav a, .dropdown > p {
+    background: var(--light-bg);
+    color: #ff8819;
+    padding: 0.7rem 1.5rem;
+    margin: 5px;
+    border-radius: 25px;
+    border: 2px solid #FFF;
+    transition: all 0.3s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+nav a:hover, .dropdown:hover > p {
+    background-color: #e4ffa1b1;
+    color: #a1ce19;
+    transform: scale(1.05);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 10;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgba(64, 198, 235, 0.815);
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.sec {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sec h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.sec p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* ===== IMAGE GALLERY ===== */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* ===== MEET THE TEAM SECTION ===== */
+.meet-team {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.meet-team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c388f;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    margin: 0 20px;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card:hover img {
+    border-radius: 10px;
+    transform: translateY(-70px);
+}
+
+.profile-card img {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 50%;
+    transition: all .4s;
+    z-index: 99;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-90px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+
+.caption p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 2px 0 12px 0;
+    text-align: center;
+}
+
+.caption .social-links i {
+    font-size: 21px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #333;
+    transition: all .4s;
+}
+
+.caption .social-links i:hover {
+    color: #721a82;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    text-align: center;
+    border-top: 3px solid #73e6e4;
+}
+
+.copyright {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.button {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border: 2px solid white;
+    align-items: center;
+}
+
+/* Add this to your existing CSS */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the main content container */
+#main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Center the inner container */
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px;
+}
+
+/* Center the back section */
+#back-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* Center the button groups */
+.buttons {
+    display: flex;
+    font-family: 'Shooting\Star.ttf';
+    justify-content: center;
+    align-items: center;
+    color: pink;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Center individual buttons */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the text */
+#text01 {
+    text-align: center;
+  
+}
+
+.button.n01, .button.n02, .button.n03 {
+    display: inline-flex;    /* or 'flex' */
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .button .icon {
+    display: none; /* Remove if you have this */
+}
+
+.wrapper .button {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 60px;
+    width: 60px;
+    margin: 3px;
+    background: linear-gradient(#fbfeff, hsl(180, 100%, 98%));
+    border-radius: 50%;      /* Makes it perfectly round */
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(202, 172, 187, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;      /* Center text */
+    font-size: 20px;         /* Adjust font size as needed */
+    color: #ffb92c;             /* Text color */
+    text-decoration: none;   /* Remove underline if it's an <a> tag */
+    border: 2px solid white; /* Optional: adds a white border */
+}
+
+
+.wrapper .button:hover {
+    transform: scale(1.1);
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+}
+
+.wrapper .button .icon i {
+    font-size: 20px;
+    line-height: 60px;
+    color: white;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+    
+    .gallery-item, .profile-card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .sec {
+        padding: 1rem;
+    }
+    
+    .sec h2 {
+        font-size: 2rem;
+    }
+    
+    .profile-card {
+        width: 180px;
+        height: 180px;
+        padding: 20px;
+    }
+}
+
+/* ===== PRELOADER ===== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: #fffaefb1;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #fff5e2;
+    border-top-color: #64cebb;
+    border-bottom-color: #fd87b1;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 0.8s linear infinite;
+}
+
+@keyframes animate-preloader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FF007F;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes cursorAnim {
+    from { transform: scale(1); }
+    to { transform: scale(.7); }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffa135;
+    border-radius: 10px;
+}
