@@ -1,12 +1,1 @@
-.info {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 5px double #6AE2FB; 
-    border-radius: 15px;
-    background: #E0FFFF;
-}
 
-body{
-    cursor: url('cursor.cur'), auto;
-}
