@@ -780,6 +780,37 @@ nav a:hover, .dropdown:hover > p {
     transform: scale(1.05);
 }
 
+.round {
+	position: relative;
+	width: 450px;
+	height: 450px;
+	margin: 30px;
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+	float: inline-start;
+}
+
+.round:hover {
+	transform: translateY(-10px);
+	transition: 0.5s;
+}
+
+.igs {
+	width: 250px;
+	height: 50px;
+	border: none;
+	color: white;
+	background-color: #193b7a;
+	border-radius: 10px;
+}
+
+.igs:hover {
+	transform: translateY(-10px);
+	transition: 0.5s;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -814,6 +845,42 @@ nav a:hover, .dropdown:hover > p {
     padding-left: 20px;
 }
 
+.promo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	min-height: 75px;
+}
+
+
+.posterproduk {
+	width: 250px;
+	height: 50px;
+	border: none;
+	color: rgb(33, 28, 28);
+	background-color: #80f7f1;
+	border-radius: 10px;
+}
+
+.posterproduk:hover {
+	transform: translateY(-10px);
+	transition: 0.5s;
+}
+
+.katalog1 {
+	width: 250px;
+	height: 50px;
+	border: none;
+	color: rgb(33, 28, 28);
+	background-color: #a9e416;
+	border-radius: 10px;
+}
+
+.katalog1:hover {
+	transform: translateY(-10px);
+	transition: 0.5s;
+}
 /* ===== MAIN CONTENT ===== */
 .sec {
     width: 90%;
@@ -826,6 +893,30 @@ nav a:hover, .dropdown:hover > p {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+a:link {
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	text-decoration: none;
+  }
+  
+  a:visited {
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	color: rgb(255, 245, 245);
+	background-color: transparent;
+	text-decoration: none;
+  }
+  
+  a:active {
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	text-decoration: none;
+  }
 
 .sec h2 {
     font-size: 2.5rem;
