@@ -45,6 +45,26 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Ensure dropdowns don't block click events
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        // Stop propagation only for dropdown parents
+        if (!this.parentElement.classList.contains('dropdown-content')) {
+            e.stopPropagation();
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.matches('.dropdown > p')) {
+        const dropdowns = document.querySelectorAll('.dropdown-content');
+        dropdowns.forEach(dropdown => {
+            dropdown.style.display = 'none';
+        });
+    }
+});
+
 setInterval(changeText, 2000);
 const cursor = document.querySelector('.cursor');
 
