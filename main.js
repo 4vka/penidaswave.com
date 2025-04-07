@@ -1,4 +1,23 @@
 
+
+// Header scroll effect
+document.addEventListener('DOMContentLoaded', function() {
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.classList.add('compact');
+        } else {
+            header.classList.remove('compact');
+        }
+        
+        lastScroll = currentScroll;
+    });
+});
+
 (function () {
     "use strict";
 
