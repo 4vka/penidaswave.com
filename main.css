@@ -827,7 +827,7 @@ nav a:hover, .dropdown:hover > p {
 	width: 250px;
 	height: 50px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 15px;
 }
 
 .posterproduk:hover {
@@ -1228,23 +1228,6 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* ===== CUSTOM CURSOR ===== */
-.cursor {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #FF007F;
-    border-radius: 50%;
-    position: absolute;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursorAnim .5s infinite alternate;
-    pointer-events: none;
-}
-
-@keyframes cursorAnim {
-    from { transform: scale(1); }
-    to { transform: scale(.7); }
-}
 
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
