@@ -21,6 +21,50 @@
         .sec h2 {
             font-weight: bold;
         }
+        .sec {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .promo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        :root {
+            --primary: #53C3B8;  /* Teal */
+            --secondary: #FF8CA1; /* Coral */
+            --accent: #70E7FF;   /* Light blue */
+            --dark: #2A5E5B;     /* Dark teal */
+            --light: #F5F9FA;    /* Off-white */
+            --text: #333333;     /* Dark gray */
+        }
+
+        .promo button {
+          background-color: #FF8CA1;
+          text-decoration: none;
+            color: rgb(255, 164, 164);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .promo button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .round {
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <header>
