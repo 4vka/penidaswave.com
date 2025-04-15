@@ -18,17 +18,6 @@
     <link href="glightbox.min.css" rel="stylesheet">
     <link href="swiper-bundle.min.css" rel="stylesheet">
     <style>
-        .sec h2 {
-            font-weight: bold;
-        }
-        .sec {
-            background-color: white;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
         .promo {
             display: flex;
             flex-wrap: wrap;
@@ -37,33 +26,32 @@
             margin: 1rem 0;
         }
         
-        :root {
-            --primary: #53C3B8;  /* Teal */
-            --secondary: #FF8CA1; /* Coral */
-            --accent: #70E7FF;   /* Light blue */
-            --dark: #2A5E5B;     /* Dark teal */
-            --light: #F5F9FA;    /* Off-white */
-            --text: #333333;     /* Dark gray */
-        }
-
         .promo button {
-          background-color: #FF8CA1;
-          text-decoration: none;
-            color: rgb(255, 164, 164);
+            background-color: #FF8CA1;
+            color: white; /* Changed from pink to white for better contrast */
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem; /* Increased padding for better proportions */
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s;
+            font-weight: bold;
+            min-width: 150px; /* Set a minimum width for even sizing */
+            text-align: center;
+            flex: 1; /* Makes buttons grow equally */
+            max-width: 200px; /* Maximum width to prevent over-expansion */
         }
         
         .promo button:hover {
-            background-color: var(--secondary);
+            background-color: #e07a8d; /* Slightly darker shade for hover */
             transform: translateY(-3px);
+            text-decoration: none; /* Ensures no underline on hover */
         }
         
-        .round {
-            margin: 1rem 0;
+        .promo a {
+            text-decoration: none; /* Removes underline from links */
+            color: inherit; /* Inherits color from button */
+            display: block; /* Makes the link fill the button */
+            height: 100%;
         }
     </style>
 </head>
@@ -130,11 +118,11 @@
         <i>TikTok</i> adalah platform yang saat ini banyak sekali digunakan oleh para siswi. <br>Promosi kami berupa :
         <br><br>
 
-    <div button class="promo">
-        <button class="posterproduk"> <a href="#pproduk">Poster Produk</button></a>
-        <button class="katalog1"> <a href="#katalog">Katalog</button></a>
-        <button class="igs"> <a href="#igstory">Instagram Story</button></a>
-    </div><br>
+        <div class="promo">
+            <button><a href="#pproduk">Poster Produk</a></button>
+            <button><a href="#katalog">Katalog</a></button>
+            <button><a href="#igstory">Instagram Story</a></button>
+        </div>
 
 
     <section id="pproduk">
