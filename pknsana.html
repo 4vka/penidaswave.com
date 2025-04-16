@@ -29,6 +29,34 @@
             color: rgb(160, 192, 48);
         }
         
+        .product-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        
+        .product-item img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .product-text {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .product-item {
+                flex-direction: column;
+            }
+            
+            .product-item img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -123,45 +151,90 @@
         <p>Berikut produk final yang kami jual pada bazaar:</p>
         
         <div class="product-details">
-            <h4>Gambar 1 (makanan tradisional)</h4>
-            <p>Sate lontong berasal dari Ponorogo, Jawa Timur. Kata sate berasal dari bahasa Jawa ponoragan "Sak biting" yang artinya satu tusuk. Sedangkan kata lontong yang merupakan singkatan dari "olone dadi kothong" yang artinya kejelekan menjadi kosong. Sate lontong kemudian menyebar ke seluruh pulau Indonesia dan telah dikembangkan sesuai budaya lokal masing-masing pulau. Seperti sate lontong khas Madura, yang dibumbui saus kacang yang kental dan gurih.</p>
+            <div class="product-item">
+                <img src="sate.jpeg" alt="Makanan Tradisional - Sate Lontong">
+                <div class="product-text">
+                    <h4>Gambar 1 (makanan tradisional)</h4>
+                    <p>Sate lontong berasal dari Ponorogo, Jawa Timur. Kata sate berasal dari bahasa Jawa ponoragan "Sak biting" yang artinya satu tusuk. Sedangkan kata lontong yang merupakan singkatan dari "olone dadi kothong" yang artinya kejelekan menjadi kosong. Sate lontong kemudian menyebar ke seluruh pulau Indonesia dan telah dikembangkan sesuai budaya lokal masing-masing pulau. Seperti sate lontong khas Madura, yang dibumbui saus kacang yang kental dan gurih.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 2 (pakaian tradisional)</h4>
-            <p>Pakaian tradisional khas Nusa Tenggara Timur suku Sabu terdiri dari kain tenun ikat dan kebaya. Pada stiker kami, terlihat seorang wanita sedang memakai pakaian ini, dengan ikat kepala dari emas, menyerupai mahkota dengan 3 cabang utama, serta perhiasan emas di leher.</p>
+            <div class="product-item">
+                <img src="girl1.jpeg" alt="Pakaian Tradisional - Nusa Tenggara Timur">
+                <div class="product-text">
+                    <h4>Gambar 2 (pakaian tradisional)</h4>
+                    <p>Pakaian tradisional khas Nusa Tenggara Timur suku Sabu terdiri dari kain tenun ikat dan kebaya. Pada stiker kami, terlihat seorang wanita sedang memakai pakaian ini, dengan ikat kepala dari emas, menyerupai mahkota dengan 3 cabang utama, serta perhiasan emas di leher.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 3 (budaya nasional)</h4>
-            <p>Batik merupakan budaya nasional Indonesia yang diakui sebagai warisan budaya tak benda pada tahun 2009 oleh UNESCO. Batik adalah kain bergambar yang dibuat dengan 9 langkah utama yaitu:</p>
-            <ol>
-                <li>Nyungging (pembuatan pola)</li>
-                <li>Njeplak (memindahkan pola ke kain)</li>
-                <li>Nglowong (melekatkan malam ke kain)</li>
-                <li>Ngiseni (memberi motif isian)</li>
-                <li>Nyolet (mewarnai motif bunga/burung dengan kuas)</li>
-                <li>Nembok (menutup dasar kain yang tidak diwarna dengan malam)</li>
-                <li>Ngelir (mencelupkan kain ke larutan pewarna)</li>
-                <li>Nglorod (pembilasan untuk menghilangkan malam)</li>
-                <li>Ngrentesi (mempercantik motif batik dengan memberi titik dengan canting tipis)</li>
-            </ol>
-            <br>
-            <p>Batik memiliki beragam motif, seperti pada gambar pada stiker kami yaitu motif parang. Motif parang berasal dari Yogyakarta, menggambarkan ombak laut selatan Yogyakarta yang menekankan semangat yang tak pernah padam.</p>
+            <div class="product-item">
+                <img src="batik.jpeg" alt="Budaya Nasional - Batik">
+                <div class="product-text">
+                    <h4>Gambar 3 (budaya nasional)</h4>
+                    <p>Batik merupakan budaya nasional Indonesia yang diakui sebagai warisan budaya tak benda pada tahun 2009 oleh UNESCO. Batik adalah kain bergambar yang dibuat dengan 9 langkah utama yaitu:</p>
+                    <ol>
+                        <li>Nyungging (pembuatan pola)</li>
+                        <li>Njeplak (memindahkan pola ke kain)</li>
+                        <li>Nglowong (melekatkan malam ke kain)</li>
+                        <li>Ngiseni (memberi motif isian)</li>
+                        <li>Nyolet (mewarnai motif bunga/burung dengan kuas)</li>
+                        <li>Nembok (menutup dasar kain yang tidak diwarna dengan malam)</li>
+                        <li>Ngelir (mencelupkan kain ke larutan pewarna)</li>
+                        <li>Nglorod (pembilasan untuk menghilangkan malam)</li>
+                        <li>Ngrentesi (mempercantik motif batik dengan memberi titik dengan canting tipis)</li>
+                    </ol>
+                    <br>
+                    <p>Batik memiliki beragam motif, seperti pada gambar pada stiker kami yaitu motif parang. Motif parang berasal dari Yogyakarta, menggambarkan ombak laut selatan Yogyakarta yang menekankan semangat yang tak pernah padam.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 4 (keberagaman agama)</h4>
-            <p>Indonesia merupakan negara yang mayoritas penduduknya Islam, namun membebaskan masyarakatnya untuk memeluk agama sesuai kepercayaan masing-masing. Pada stiker, kami menggambarkan keberagaman agama yang ada di Indonesia yaitu hindu, buddha, islam, kristen (katolik & protestan), dan konghucu. Walaupun mereka menganut agama yang berbeda, mereka tetap bersatu. Di sini, kami ingin menunjukkan bahwa keberagaman merupakan sesuatu yang indah dan patut dijaga.</p>
+            <div class="product-item">
+                <img src="girlsboy.jpeg" alt="Keberagaman Agama">
+                <div class="product-text">
+                    <h4>Gambar 4 (keberagaman agama)</h4>
+                    <p>Indonesia merupakan negara yang mayoritas penduduknya Islam, namun membebaskan masyarakatnya untuk memeluk agama sesuai kepercayaan masing-masing. Pada stiker, kami menggambarkan keberagaman agama yang ada di Indonesia yaitu hindu, buddha, islam, kristen (katolik & protestan), dan konghucu. Walaupun mereka menganut agama yang berbeda, mereka tetap bersatu. Di sini, kami ingin menunjukkan bahwa keberagaman merupakan sesuatu yang indah dan patut dijaga.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 5 (budaya tradisional)</h4>
-            <p>Sasando merupakan alat musik tradisional dari Pulau Rote, Nusa Tenggara Timur. Sasando diambil dari bahasa Rote "Sasandu" yang artinya bergetar/berbunyi. Sasando sering dimainkan untuk mengiringi tarian tradisional.</p>
+            <div class="product-item">
+                <img src="noidea.jpeg" alt="Budaya Tradisional - Sasando">
+                <div class="product-text">
+                    <h4>Gambar 5 (budaya tradisional)</h4>
+                    <p>Sasando merupakan alat musik tradisional dari Pulau Rote, Nusa Tenggara Timur. Sasando diambil dari bahasa Rote "Sasandu" yang artinya bergetar/berbunyi. Sasando sering dimainkan untuk mengiringi tarian tradisional.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 6 (flora)</h4>
-            <p>Bunga bangkai merupakan flora endemik Sumatera. Bunga bangkai merupakan bunga terbesar dan tertinggi di dunia, yang mengeluarkan bau busuk untuk memikat serangga. Bunga bangkai telah diakui oleh UNESCO pada tahun 2004.</p>
+            <div class="product-item">
+                <img src="flowers.jpeg" alt="Flora - Bunga Bangkai">
+                <div class="product-text">
+                    <h4>Gambar 6 (flora)</h4>
+                    <p>Bunga bangkai merupakan flora endemik Sumatera. Bunga bangkai merupakan bunga terbesar dan tertinggi di dunia, yang mengeluarkan bau busuk untuk memikat serangga. Bunga bangkai telah diakui oleh UNESCO pada tahun 2004.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 7 (budaya tradisional)</h4>
-            <p>Payas Agung Bali merupakan pakaian adat Bali. Payas Agung memiliki makna keindahan, kebahagiaan dan kegembiraan. Payas Agung merupakan pakaian mewah dan spesial, biasa digunakan untuk upacara penting seperti potong gigi dan pernikahan.</p>
+            <div class="product-item">
+                <img src="yass.jpeg" alt="Budaya Tradisional - Payas Agung Bali">
+                <div class="product-text">
+                    <h4>Gambar 7 (budaya tradisional)</h4>
+                    <p>Payas Agung Bali merupakan pakaian adat Bali. Payas Agung memiliki makna keindahan, kebahagiaan dan kegembiraan. Payas Agung merupakan pakaian mewah dan spesial, biasa digunakan untuk upacara penting seperti potong gigi dan pernikahan.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 8 (flora)</h4>
-            <p>Bunga rafflesia arnoldi merupakan flora langka yang berasal dari Provinsi Bengkulu. Bunga rafflesia dinobatkan sebagai bunga terbesar di dunia bersama dengan bunga bangkai.</p>
+            <div class="product-item">
+                <img src="flowers.jpeg" alt="Flora - Bunga Rafflesia Arnoldi">
+                <div class="product-text">
+                    <h4>Gambar 8 (flora)</h4>
+                    <p>Bunga rafflesia arnoldi merupakan flora langka yang berasal dari Provinsi Bengkulu. Bunga rafflesia dinobatkan sebagai bunga terbesar di dunia bersama dengan bunga bangkai.</p>
+                </div>
+            </div>
             
-            <h4>Gambar 9 (budaya tradisional)</h4>
-            <p>Pura Bali merupakan tempat beribadah masyarakat pemeluk agama Hindu. Pura merupakan tempat pemujaan Hyang Widhi Wasa. Pura dibangun dengan tingkatan yang ganjil (11 tingkat). Tingginya pura menunjukkan tingkatan dewa yang dihormati di pura tersebut.</p>
+            <div class="product-item">
+                <img src="pura.jpg" alt="Budaya Tradisional - Pura Bali">
+                <div class="product-text">
+                    <h4>Gambar 9 (budaya tradisional)</h4>
+                    <p>Pura Bali merupakan tempat beribadah masyarakat pemeluk agama Hindu. Pura merupakan tempat pemujaan Hyang Widhi Wasa. Pura dibangun dengan tingkatan yang ganjil (11 tingkat). Tingginya pura menunjukkan tingkatan dewa yang dihormati di pura tersebut.</p>
+                </div>
+            </div>
         </div>
         
         <h3>Makna dan Harapan</h3>
