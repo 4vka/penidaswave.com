@@ -18,7 +18,7 @@
     <link href="glightbox.min.css" rel="stylesheet">
     <link href="swiper-bundle.min.css" rel="stylesheet">
     <style>
-        .sec{
+       .sec{
             text-align: justify;
             color: black;
         }
@@ -32,15 +32,18 @@
         .product-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
-            gap: 20px;
+            margin-bottom: 30px;
+            gap: 25px;
         }
         
         .product-item img {
-            width: 150px;
-            height: auto;
+            width: 200px;
+            height: 200px;
             border-radius: 8px;
             object-fit: cover;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
         }
         
         .product-text {
@@ -54,7 +57,9 @@
             
             .product-item img {
                 width: 100%;
-                margin-bottom: 10px;
+                height: auto;
+                max-height: 300px;
+                margin-bottom: 15px;
             }
         }
     </style>
